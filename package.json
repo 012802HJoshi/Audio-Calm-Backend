@@ -1,0 +1,27 @@
+{
+  "name": "calm_backend",
+  "version": "1.0.0",
+  "description": "Content Management System",
+  "license": "ISC",
+  "author": "rareprob",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "NODE_ENV=development npx nodemon",
+    "start:prod": "NODE_ENV=production node src/index.js"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^7.17.0",
+    "audio-decode": "^2.2.3",
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "express-status-monitor": "^1.3.4",
+    "multer": "^2.0.2",
+    "mysql2": "^3.14.4",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

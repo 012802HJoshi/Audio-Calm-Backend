@@ -17,10 +17,12 @@ dotenv.config({
 import "./Database/initDatabase.js";
 
 import { router as calmapi } from "./Router/route.calm.js";
+import {router as chunk} from "./Router/route.chunck.js";
 
 const port = process.env.PORT;
 
 app.use('/calm', calmapi);
+app.use("/chunck",chunk);
 
 app.get("/", (req, res) => {
   return res.status(200).send("Hello Calm Sleep Server developed and CI/CDed by Harshit Joshi !!!");

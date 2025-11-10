@@ -21,22 +21,20 @@ export const streaming_audio = async (req, res) => {
     const contentType = metadata.contentType || mime.lookup(url) || "application/octet-stream";
     const size = parseInt(metadata.size, 10);
 
-
     res.setHeader("Content-Type", contentType);
     res.setHeader("Content-Length", size);
     res.setHeader("Cache-Control", "public, max-age=3600");
     res.setHeader("Accept-Ranges", "none");
-    res.status(200);
 
 
     const readStream = file.createReadStream();
 
-    console.log(`Streaming started for: ${url}`);
+
 
     readStream.on("data", (chunk) => {
       const ok = res.write(chunk);
+      // console.log(`Streaming started for: ${url}`);
       if (!ok) {
-  
         readStream.pause();
         res.once("drain", () => readStream.resume());
       }

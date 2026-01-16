@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import status from "express-status-monitor";
+// import redisClient from "./Redis/redisClient.js";
 
 const app = express();
 
@@ -28,7 +29,9 @@ app.get("/", (req, res) => {
   return res.status(200).send("Hello Calm Sleep Server developed and CI/CDed by Harshit Joshi !!!");
 });
 
-
 app.listen(port, () => {
+//   redisClient.connect(()=>{
+//     console.log("Redis Connection is Built Successful");
+// });
   console.log(`[Server]: Server FiredUp at ${port}`);
 });

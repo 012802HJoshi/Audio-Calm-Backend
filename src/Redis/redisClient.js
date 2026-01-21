@@ -5,11 +5,12 @@ const redisClient = createClient({
 })
 
 redisClient.on("error",(err)=>{
-    console.error("Redis Error:",err);
+    console.error("Redis Error :",err);
 });
 
-// .on("connect",(stream)=>{
-//     console.log("Redis Connection Successfull");
-// });
+(async()=>{
+  await redisClient.connect();
+  console.log("Redis Connected");
+})();
 
 export default redisClient;

@@ -5,6 +5,7 @@ import { Op } from 'sequelize';
 import { gcsupload } from '../Helper/gcsupload.js';
 import { gcsdelete } from '../Helper/gcsdelete.js';
 import { name_maker } from '../Helper/name_maker.js';
+import redisClient from '../Redis/redisClient.js';
 
 
 export const createCategory = async(req,res)=>{
@@ -92,10 +93,10 @@ export const createSound = async(req,res)=>{
 }
 
 export const getSound = async(req,res)=>{
+   const cacheKey = "CALM:SOUNDS";
+
    try{
     const {cat_id,tag} = req.query;
-
-    console.log(cat_id);
 
     if(!cat_id && !tag){
      return res.status(401).json({
@@ -112,6 +113,12 @@ export const getSound = async(req,res)=>{
           cat_id: Array.isArray(cat_id) ? {[Op.in]:cat_id} :cat_id
         }
       });
+
+      await redisClient.setEx(
+          `${cacheKey}:${cat_id}`,
+          3600, 
+          JSON.stringify({cat_data:categories,data:sounds})
+      );
    
     return res.status(200).json({
        message:'Fetched All Data By Category Id',
@@ -126,21 +133,29 @@ export const getSound = async(req,res)=>{
    }
 }
 
-export const getAllCategory = async(req,res)=>{
-  try{
-  const categories = await Category.findAll();
+export const getAllCategory = async (req, res) => {
+    const cacheKey = "CALM:ALL_CATEGORIES";
 
-   return res.status(200).json({
-       message:'All Category Data Fetched',
-       data:categories
-    });
+    try {
+        const categories = await Category.findAll();
 
-  }catch(err){
-    return res.status(500).json({
-       message:`Internal Server Error: ${err}`,
-    });
-  }
-}
+        await redisClient.setEx(
+            cacheKey,
+            3600, 
+            JSON.stringify(categories)
+        );
+
+        return res.status(200).json({
+            message: "All Category Data Fetched",
+            data: categories
+        });
+
+    } catch (err) {
+        return res.status(500).json({
+            message: `Internal Server Error: ${err.message}`
+        });
+    }
+};
 
 export const deleteCategory = async (req, res) => {
   try {

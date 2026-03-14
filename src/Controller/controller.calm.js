@@ -92,69 +92,200 @@ export const createSound = async(req,res)=>{
  }
 }
 
-export const getSound = async(req,res)=>{
-   const cacheKey = "CALM:SOUNDS";
+// export const getSound = async(req,res)=>{
+//    const cacheKey = "CALM:SOUNDS";
 
-   try{
-    const {cat_id,tag} = req.query;
+//    try{
+//     const {cat_id,tag} = req.query;
 
-    if(!cat_id && !tag){
-     return res.status(401).json({
-      message:'missing data'
-    })
-    }
+//     if(!cat_id && !tag){
+//      return res.status(401).json({
+//       message:'missing data'
+//     })
+//     }
 
-    const categories = await Category.findOne({
-      where:{cat_id:cat_id}
-    })
+//     const categories = await Category.findOne({
+//       where:{cat_id:cat_id}
+//     })
 
-      const sounds = await Sound.findAll({
-        where:{
-          cat_id: Array.isArray(cat_id) ? {[Op.in]:cat_id} :cat_id
-        }
-      });
+//       const sounds = await Sound.findAll({
+//         where:{
+//           cat_id: Array.isArray(cat_id) ? {[Op.in]:cat_id} :cat_id
+//         }
+//       });
 
-      await redisClient.setEx(
-          `${cacheKey}:${cat_id}`,
-          3600, 
-          JSON.stringify({cat_data:categories,data:sounds})
-      );
+//       await redisClient.setEx(
+//           `${cacheKey}:${cat_id}`,
+//           3600, 
+//           JSON.stringify({cat_data:categories,data:sounds})
+//       );
    
-    return res.status(200).json({
-       message:'Fetched All Data By Category Id',
-       cat_data:categories,
-       data:sounds
-    });
+//     return res.status(200).json({
+//        message:'Fetched All Data By Category Id',
+//        cat_data:categories,
+//        data:sounds
+//     });
 
-   }catch(err){
-    return res.status(500).json({
-       message:`Internal Server Error: ${err}`,
-    });
-   }
-}
+//    }catch(err){
+//     return res.status(500).json({
+//        message:`Internal Server Error: ${err}`,
+//     });
+//    }
+// }
+
+// export const getAllCategory = async (req, res) => {
+//     const cacheKey = "CALM:ALL_CATEGORIES";
+
+//     try {
+//         const categories = await Category.findAll();
+
+//         await redisClient.setEx(
+//             cacheKey,
+//             3600, 
+//             JSON.stringify(categories)
+//         );
+
+//         return res.status(200).json({
+//             message: "All Category Data Fetched",
+//             data: categories
+//         });
+
+//     } catch (err) {
+//         return res.status(500).json({
+//             message: `Internal Server Error: ${err.message}`
+//         });
+//     }
+// };
 
 export const getAllCategory = async (req, res) => {
-    const cacheKey = "CALM:ALL_CATEGORIES";
+  const cacheKey = "CALM:ALL_CATEGORIES";
 
-    try {
-        const categories = await Category.findAll();
-
-        await redisClient.setEx(
-            cacheKey,
-            3600, 
-            JSON.stringify(categories)
-        );
-
-        return res.status(200).json({
-            message: "All Category Data Fetched",
-            data: categories
-        });
-
-    } catch (err) {
-        return res.status(500).json({
-            message: `Internal Server Error: ${err.message}`
-        });
+  try {
+    // Check cache first
+    const cached = await redisClient.get(cacheKey);
+    if (cached) {
+      return res.status(200).json(JSON.parse(cached));
     }
+
+    const categories = await Category.findAll();
+
+    const formattedCategories = categories.map((cat) => ({
+      cat_id: String(cat.cat_id),
+      cat_name: cat.title,
+      thumnail_img: cat.thumbnail_img,
+      premium: cat.premium ? "Y" : "N",
+      count: "25",
+      updated: cat.updatedAt,
+      likes: "25",
+      banner_image: cat.banner_img
+    }));
+
+    const response = {
+      status: {
+        message: "success",
+        code: "200",
+        code_str: "ok",
+        extra_data: ""
+      },
+      data: formattedCategories
+    };
+
+    // Store formatted response in cache
+    await redisClient.setEx(cacheKey, 3600, JSON.stringify(response));
+
+    return res.status(200).json(response);
+
+  } catch (err) {
+    return res.status(500).json({
+      status: {
+        message: "Internal Server Error",
+        code: "500",
+        code_str: "server_error",
+        extra_data: err.message
+      }
+    });
+  }
+};
+
+
+export const getSound = async (req, res) => {
+  try {
+    const { cat_id } = req.query;
+
+    if (!cat_id) {
+      return res.status(400).json({
+        status: {
+          message: "missing data",
+          code: "400",
+          code_str: "bad_request",
+          extra_data: ""
+        }
+      });
+    }
+
+    const cacheKey = `CALM:SOUNDS:${cat_id}`;
+
+    // Check cache first
+    const cached = await redisClient.get(cacheKey);
+    if (cached) {
+      return res.status(200).json(JSON.parse(cached));
+    }
+
+    const category = await Category.findOne({ where: { cat_id } });
+
+    if (!category) {
+      return res.status(404).json({
+        status: {
+          message: "Category not found",
+          code: "404",
+          code_str: "not_found",
+          extra_data: ""
+        }
+      });
+    }
+
+    const sounds = await Sound.findAll({ where: { cat_id } });
+
+    const formattedSounds = sounds.map((sound) => ({
+      id: String(sound.sound_id),
+      title: sound.title,
+      st_url: sound.sound_audio,
+      thumbnail: sound.thumbnail_img,
+      big_img: "NA",
+      premium: sound.premium ? "Y" : "N",
+      writer: category.title,
+      powerdby: "NA",
+      duration: sound.duration || "NA"
+    }));
+
+    const response = {
+      status: {
+        message: "success",
+        code: "200",
+        code_str: "ok",
+        extra_data: ""
+      },
+      data: {
+        Lastupdated: new Date().toISOString(),
+        [category.title]: formattedSounds   // ← fixed: was category.cat_name (doesn't exist on model)
+      }
+    };
+
+    // Store formatted response in cache
+    await redisClient.setEx(cacheKey, 3600, JSON.stringify(response));
+
+    return res.status(200).json(response);
+
+  } catch (err) {
+    return res.status(500).json({
+      status: {
+        message: "Internal Server Error",
+        code: "500",
+        code_str: "server_error",
+        extra_data: err.message
+      }
+    });
+  }
 };
 
 export const deleteCategory = async (req, res) => {

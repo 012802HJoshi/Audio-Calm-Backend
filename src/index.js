@@ -1,12 +1,8 @@
 import express from "express";
-import axios from "axios";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
-import status from "express-status-monitor";
 
 const app = express();
-
-app.use(status());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

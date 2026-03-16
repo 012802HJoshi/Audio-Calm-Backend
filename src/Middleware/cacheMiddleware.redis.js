@@ -5,6 +5,10 @@ const checkCache = (cacheKey) => {
     const { cat_id } = req.query;
 
     try {
+      if (!redisClient?.isReady) {
+        return next();
+      }
+
       if (cat_id) {
         const cachedData = await redisClient.get(`${cacheKey}:${cat_id}`);
 

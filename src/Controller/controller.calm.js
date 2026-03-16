@@ -162,9 +162,17 @@ export const getAllCategory = async (req, res) => {
 
   try {
     // Check cache first
-    const cached = await redisClient.get(cacheKey);
-    if (cached) {
-      return res.status(200).json(JSON.parse(cached));
+    try {
+      if (!redisClient?.isReady) throw new Error("redis_not_ready");
+      const cached = await redisClient.get(cacheKey);
+      if (cached) {
+        return res.status(200).json(JSON.parse(cached));
+      }
+    } catch (err) {
+      // Redis is optional; continue without cache
+      if (err?.message !== "redis_not_ready") {
+        console.log("Redis get failed (getAllCategory)", err?.message || err);
+      }
     }
 
     const categories = await Category.findAll();
@@ -191,7 +199,13 @@ export const getAllCategory = async (req, res) => {
     };
 
     // Store formatted response in cache
-    await redisClient.setEx(cacheKey, 3600, JSON.stringify(response));
+    try {
+      if (redisClient?.isReady) {
+        await redisClient.setEx(cacheKey, 3600, JSON.stringify(response));
+      }
+    } catch (err) {
+      console.log("Redis setEx failed (getAllCategory)", err?.message || err);
+    }
 
     return res.status(200).json(response);
 
@@ -226,9 +240,16 @@ export const getSound = async (req, res) => {
     const cacheKey = `CALM:SOUNDS:${cat_id}`;
 
     // Check cache first
-    const cached = await redisClient.get(cacheKey);
-    if (cached) {
-      return res.status(200).json(JSON.parse(cached));
+    try {
+      if (!redisClient?.isReady) throw new Error("redis_not_ready");
+      const cached = await redisClient.get(cacheKey);
+      if (cached) {
+        return res.status(200).json(JSON.parse(cached));
+      }
+    } catch (err) {
+      if (err?.message !== "redis_not_ready") {
+        console.log("Redis get failed (getSound)", err?.message || err);
+      }
     }
 
     const category = await Category.findOne({ where: { cat_id } });
@@ -272,7 +293,13 @@ export const getSound = async (req, res) => {
     };
 
     // Store formatted response in cache
-    await redisClient.setEx(cacheKey, 3600, JSON.stringify(response));
+    try {
+      if (redisClient?.isReady) {
+        await redisClient.setEx(cacheKey, 3600, JSON.stringify(response));
+      }
+    } catch (err) {
+      console.log("Redis setEx failed (getSound)", err?.message || err);
+    }
 
     return res.status(200).json(response);
 

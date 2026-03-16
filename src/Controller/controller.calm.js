@@ -267,7 +267,7 @@ export const getSound = async (req, res) => {
       },
       data: {
         Lastupdated: new Date().toISOString(),
-        [category.title]: formattedSounds   // ← fixed: was category.cat_name (doesn't exist on model)
+        calm: formattedSounds   // ← fixed: was category.cat_name (doesn't exist on model)
       }
     };
 

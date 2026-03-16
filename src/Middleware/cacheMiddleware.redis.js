@@ -10,20 +10,14 @@ const checkCache = (cacheKey) => {
 
         if (cachedData) {
           console.log("CACHE HIT");
-          return res.status(200).json({
-            message: "Fetched All Data By Category Id (cached)",
-            data: JSON.parse(cachedData),
-          });
+          return res.status(200).json(JSON.parse(cachedData));
         }
       } else {
         const cachedData = await redisClient.get(cacheKey);
 
         if (cachedData) {
           console.log("CACHE HIT");
-          return res.status(200).json({
-            message: "All Category Data (cached)",
-            data: JSON.parse(cachedData),
-          });
+          return res.status(200).json(JSON.parse(cachedData));
         }
       }
       

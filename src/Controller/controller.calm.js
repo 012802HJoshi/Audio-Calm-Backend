@@ -201,7 +201,7 @@ export const getAllCategory = async (req, res) => {
     // Store formatted response in cache
     try {
       if (redisClient?.isReady) {
-        await redisClient.setEx(cacheKey, 3600, JSON.stringify(response));
+        await redisClient.setEx(cacheKey, 600, JSON.stringify(response));
       }
     } catch (err) {
       console.log("Redis setEx failed (getAllCategory)", err?.message || err);
@@ -295,7 +295,7 @@ export const getSound = async (req, res) => {
     // Store formatted response in cache
     try {
       if (redisClient?.isReady) {
-        await redisClient.setEx(cacheKey, 3600, JSON.stringify(response));
+        await redisClient.setEx(cacheKey, 600, JSON.stringify(response));
       }
     } catch (err) {
       console.log("Redis setEx failed (getSound)", err?.message || err);

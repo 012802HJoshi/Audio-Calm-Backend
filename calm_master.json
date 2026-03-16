@@ -1,0 +1,234 @@
+{
+   "status":{
+      "message":"success",
+      "code":"200",
+      "code_str":"ok",
+      "extra_data":""
+   },
+   "data":{
+      "Lastupdated":"2022-01-10T12:15:00Z",
+      "calm":[
+         {
+                    "id": "1",
+                    "title": "Sleepy Shores",
+                    "st_url": "https://storage.googleapis.com/calm_sleep/deep_sleep/sleepy_shores/1_sleepy_shores.mp3",
+                    "thumbnail": "https://storage.googleapis.com/calm_sleep/deep_sleep/sleepy_shores/1_sleepy_shores.jpg",
+                    "big_img": "NA",
+                    "premium": "N",
+                    "writer": "Deep Sleep",
+                    "powerdby": "NA",
+                    "duration": "9:58"
+                },
+         {
+                    "id": "2",
+                    "title": "Far Beyond",
+                    "st_url": "https://storage.googleapis.com/calm_sleep/deep_sleep/far_beyond/5_far_beyond.mp3",
+                    "thumbnail": "https://storage.googleapis.com/calm_sleep/deep_sleep/far_beyond/5_far_beyond.jpg",
+                    "big_img": "NA",
+                    "premium": "N",
+                    "writer": "Deep Sleep",
+                    "powerdby": "NA",
+                    "duration": "2:48"
+                },
+         {
+                    "id": "3",
+                    "title": "Awake Within",
+                    "st_url": "https://storage.googleapis.com/calm_sleep/deep_sleep/awake_within/12_awake_within.mp3",
+                    "thumbnail": "https://storage.googleapis.com/calm_sleep/deep_sleep/awake_within/12_awake_within.jpg",
+                    "big_img": "NA",
+                    "premium": "N",
+                    "writer": "Deep Sleep",
+                    "powerdby": "NA",
+                    "duration": "2:35"
+                },
+         {
+            "id":"4",
+            "title":"Floating To Sleep",
+            "st_url":"/audio/calm/floating_to_sleep.mp3",
+            "thumbnail":"/img/calm/floating_to_sleep.jpg",
+            "big_img":"",
+            "premium":"y",
+            "writer":"",
+            "powerdby":"",
+            "duration":""
+         },
+          {
+                    "id": "5",
+                    "title": "Sleep Spell",
+                    "st_url": "https://storage.googleapis.com/calm_sleep/deep_sleep/sleep_spell/15_sleep_spell.mp3",
+                    "thumbnail": "https://storage.googleapis.com/calm_sleep/deep_sleep/sleep_spell/15_sleep_spell.jpg",
+                    "big_img": "NA",
+                    "premium": "N",
+                    "writer": "Deep Sleep",
+                    "powerdby": "NA",
+                    "duration": "9:23"
+                },
+         {
+                    "id": "6",
+                    "title": "Always been you",
+                    "st_url": "https://storage.googleapis.com/calm_sleep/romantic/always_been_you/18_Always_been_you.mp3",
+                    "thumbnail": "https://storage.googleapis.com/calm_sleep/romantic/always_been_you/18_Always_been_you.jpg",
+                    "big_img": "NA",
+                    "premium": "N",
+                    "writer": "Romantic",
+                    "powerdby": "NA",
+                    "duration": "3:06"
+                },
+         {
+            "id": "7",
+                    "title": "Lovers",
+                    "st_url": "https://storage.googleapis.com/calm_sleep/romantic/lovers/Lovers.mp3",
+                    "thumbnail": "https://storage.googleapis.com/calm_sleep/romantic/lovers/19_Lovers.jpg",
+                    "big_img": "NA",
+                    "premium": "N",
+                    "writer": "Romantic",
+                    "powerdby": "NA",
+                    "duration": "1:16"
+         },
+         {
+                "id": "8",
+                "title": "Timeless Ensemble",
+                "st_url": "https://storage.googleapis.com/calm_sleep/gentle_joy_/timeless_ensemble/timeless-ensemble_main-full.wav",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/gentle_joy_/timeless_ensemble/2.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Gentle Joy ",
+                "powerdby": "NA",
+                "duration": "2:32"
+            },
+         {
+                "id": "9",
+                "title": "A Travel to Italy",
+                "st_url": "https://storage.googleapis.com/calm_sleep/gentle_joy_/a_travel_to_italy/A Travel to Italy.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/gentle_joy_/a_travel_to_italy/5.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Gentle Joy ",
+                "powerdby": "NA",
+                "duration": "2:30"
+            },
+         {
+                "id": "10",
+                "title": "Greece",
+                "st_url": "https://storage.googleapis.com/calm_sleep/gentle_joy_/greece/Greece.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/gentle_joy_/greece/12.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Gentle Joy ",
+                "powerdby": "NA",
+                "duration": "2:02"
+            },
+        {
+                "id": "11",
+                "title": "Rain",
+                "st_url": "https://storage.googleapis.com/calm_sleep/nature/rain/Rain.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/nature/rain/1.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Nature",
+                "powerdby": "NA",
+                "duration": "2:09"
+            }
+         ,
+         {
+                "id": "12",
+                "title": "Mystery in the Forest",
+                "st_url": "https://storage.googleapis.com/calm_sleep/nature/mystery_in_the_forest/Mystery in the Forest.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/nature/mystery_in_the_forest/5.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Nature",
+                "powerdby": "NA",
+                "duration": "2:30"
+            },
+         {
+                "id": "13",
+                "title": "Birds",
+                "st_url": "https://storage.googleapis.com/calm_sleep/nature/birds/Birds.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/nature/birds/8.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Nature",
+                "powerdby": "NA",
+                "duration": "2:43"
+            },
+         {
+                "id": "14",
+                "title": "Wind with Gusts",
+                "st_url": "https://storage.googleapis.com/calm_sleep/nature/wind_with_gusts/Wind_DIGIFX2-54-01.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/nature/wind_with_gusts/14.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Nature",
+                "powerdby": "NA",
+                "duration": "0:31"
+         },
+         {
+                "id": "15",
+                "title": "Instrumental Lofi Chillout",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/instrumental_lofi_chillout/Instrumental+Lofi+Chillout.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/instrumental_lofi_chillout/19.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "2:21"
+            },
+         {
+                "id": "16",
+                "title": "Funk Positive Background Groove",
+                "st_url": "https://storage.googleapis.com/calm_sleep/soft_pop/funk_positive_background_groove/Funk Positive Background Groove_110.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/soft_pop/funk_positive_background_groove/11.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Soft Pop",
+                "powerdby": "NA",
+                "duration": "1:47"
+            },
+         {
+                "id": "17",
+                "title": "Sweet Soul Love",
+                "st_url": "https://storage.googleapis.com/calm_sleep/soft_pop/sweet_soul_love/sweet soul love (full).mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/soft_pop/sweet_soul_love/14.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Soft Pop",
+                "powerdby": "NA",
+                "duration": "2:45"
+            },
+         {
+                "id": "18",
+                "title": "A Beautiful Love Piano Pop",
+                "st_url": "https://storage.googleapis.com/calm_sleep/soft_pop/a_beautiful_love_piano_pop/A+Beautiful+Love+Piano+Pop.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/soft_pop/a_beautiful_love_piano_pop/18.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Soft Pop",
+                "powerdby": "NA",
+                "duration": "2:19"
+            },
+            {
+                "id": "19",
+                "title": "Mind Detox",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/mind_detox/Mind+Detox.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/mind_detox/16.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "8:48"
+            },
+            {
+                "id": "20",
+                "title": "Binaural Yoga Relax",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_yoga_relax/binaural+yoga+relax.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_yoga_relax/18.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "9:56"
+            }
+      ]
+   }
+}

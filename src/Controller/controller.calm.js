@@ -6,6 +6,13 @@ import { gcsupload } from '../Helper/gcsupload.js';
 import { gcsdelete } from '../Helper/gcsdelete.js';
 import { name_maker } from '../Helper/name_maker.js';
 import redisClient from '../Redis/redisClient.js';
+import path from "path";
+import { fileURLToPath } from "url";
+import { readFile } from "fs/promises";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const constantsDir = path.join(__dirname, "..", "Constants");
 
 
 export const createCategory = async(req,res)=>{
@@ -92,70 +99,70 @@ export const createSound = async(req,res)=>{
  }
 }
 
-// export const getSound = async(req,res)=>{
-//    const cacheKey = "CALM:SOUNDS";
+export const getSoundOG = async(req,res)=>{
+   const cacheKey = "CALM:SOUNDS";
 
-//    try{
-//     const {cat_id,tag} = req.query;
+   try{
+    const {cat_id,tag} = req.query;
 
-//     if(!cat_id && !tag){
-//      return res.status(401).json({
-//       message:'missing data'
-//     })
-//     }
+    if(!cat_id && !tag){
+     return res.status(401).json({
+      message:'missing data'
+    })
+    }
 
-//     const categories = await Category.findOne({
-//       where:{cat_id:cat_id}
-//     })
+    const categories = await Category.findOne({
+      where:{cat_id:cat_id}
+    })
 
-//       const sounds = await Sound.findAll({
-//         where:{
-//           cat_id: Array.isArray(cat_id) ? {[Op.in]:cat_id} :cat_id
-//         }
-//       });
+      const sounds = await Sound.findAll({
+        where:{
+          cat_id: Array.isArray(cat_id) ? {[Op.in]:cat_id} :cat_id
+        }
+      });
 
-//       await redisClient.setEx(
-//           `${cacheKey}:${cat_id}`,
-//           3600, 
-//           JSON.stringify({cat_data:categories,data:sounds})
-//       );
+      await redisClient.setEx(
+          `${cacheKey}:${cat_id}`,
+          3600, 
+          JSON.stringify({cat_data:categories,data:sounds})
+      );
    
-//     return res.status(200).json({
-//        message:'Fetched All Data By Category Id',
-//        cat_data:categories,
-//        data:sounds
-//     });
+    return res.status(200).json({
+       message:'Fetched All Data By Category Id',
+       cat_data:categories,
+       data:sounds
+    });
 
-//    }catch(err){
-//     return res.status(500).json({
-//        message:`Internal Server Error: ${err}`,
-//     });
-//    }
-// }
+   }catch(err){
+    return res.status(500).json({
+       message:`Internal Server Error: ${err}`,
+    });
+   }
+}
 
-// export const getAllCategory = async (req, res) => {
-//     const cacheKey = "CALM:ALL_CATEGORIES";
+export const getAllCategoryOG = async (req, res) => {
+    const cacheKey = "CALM:ALL_CATEGORIES";
 
-//     try {
-//         const categories = await Category.findAll();
+    try {
+        const categories = await Category.findAll();
 
-//         await redisClient.setEx(
-//             cacheKey,
-//             3600, 
-//             JSON.stringify(categories)
-//         );
+        await redisClient.setEx(
+            cacheKey,
+            3600, 
+            JSON.stringify(categories)
+        );
 
-//         return res.status(200).json({
-//             message: "All Category Data Fetched",
-//             data: categories
-//         });
+        return res.status(200).json({
+            message: "All Category Data Fetched",
+            data: categories
+        });
 
-//     } catch (err) {
-//         return res.status(500).json({
-//             message: `Internal Server Error: ${err.message}`
-//         });
-//     }
-// };
+    } catch (err) {
+        return res.status(500).json({
+            message: `Internal Server Error: ${err.message}`
+        });
+    }
+};
 
 export const getAllCategory = async (req, res) => {
   const cacheKey = "CALM:ALL_CATEGORIES";
@@ -220,7 +227,6 @@ export const getAllCategory = async (req, res) => {
     });
   }
 };
-
 
 export const getSound = async (req, res) => {
   try {
@@ -302,6 +308,214 @@ export const getSound = async (req, res) => {
     }
 
     return res.status(200).json(response);
+
+  } catch (err) {
+    return res.status(500).json({
+      status: {
+        message: "Internal Server Error",
+        code: "500",
+        code_str: "server_error",
+        extra_data: err.message
+      }
+    });
+  }
+};
+
+export const getAllCategorySpeed = async (req, res) => {
+
+  try {
+    const response = {
+    "status": {
+        "message": "success",
+        "code": "200",
+        "code_str": "ok",
+        "extra_data": ""
+    },
+    "data": [
+        {
+            "cat_id": "1",
+            "cat_name": "Romantic",
+            "thumnail_img": "https://storage.googleapis.com/calm_sleep/romantic/Romantic-Main-Thumbnail.jpg",
+            "premium": "N",
+            "count": "25",
+            "updated": "2025-09-15T10:27:19.000Z",
+            "likes": "25",
+            "banner_image": "https://storage.googleapis.com/calm_sleep/romantic/1-romantic-main banner.jpg"
+        },
+        {
+            "cat_id": "4",
+            "cat_name": "Deep Sleep",
+            "thumnail_img": "https://storage.googleapis.com/calm_sleep/deep_sleep/deep_sleep_thumbnail_image.jpg",
+            "premium": "N",
+            "count": "25",
+            "updated": "2025-09-29T09:52:16.000Z",
+            "likes": "25",
+            "banner_image": "https://storage.googleapis.com/calm_sleep/deep_sleep/deep_sleep_banner_image.jpg"
+        },
+        {
+            "cat_id": "5",
+            "cat_name": "Sweet Dreams",
+            "thumnail_img": "https://storage.googleapis.com/calm_sleep/sweet_dreams/Sweet_Dreams_Thumbnail.jpg",
+            "premium": "N",
+            "count": "25",
+            "updated": "2025-10-08T09:58:53.000Z",
+            "likes": "25",
+            "banner_image": "https://storage.googleapis.com/calm_sleep/sweet_dreams/main banner inside (Sweet Dreams).jpg"
+        },
+        {
+            "cat_id": "6",
+            "cat_name": "Gentle Joy ",
+            "thumnail_img": "https://storage.googleapis.com/calm_sleep/gentle_joy_/Cover1.jpg",
+            "premium": "N",
+            "count": "25",
+            "updated": "2025-11-28T12:25:52.000Z",
+            "likes": "25",
+            "banner_image": "https://storage.googleapis.com/calm_sleep/gentle_joy_/Cover2.jpg"
+        },
+        {
+            "cat_id": "7",
+            "cat_name": "Instrumental",
+            "thumnail_img": "https://storage.googleapis.com/calm_sleep/instrumental/Cover 1.jpg",
+            "premium": "N",
+            "count": "25",
+            "updated": "2025-12-17T08:26:48.000Z",
+            "likes": "25",
+            "banner_image": "https://storage.googleapis.com/calm_sleep/instrumental/Cover 2.jpg"
+        },
+        {
+            "cat_id": "8",
+            "cat_name": "Nature",
+            "thumnail_img": "https://storage.googleapis.com/calm_sleep/nature/Cover 1.jpg",
+            "premium": "N",
+            "count": "25",
+            "updated": "2026-01-05T05:51:00.000Z",
+            "likes": "25",
+            "banner_image": "https://storage.googleapis.com/calm_sleep/nature/Cover 2.jpg"
+        },
+        {
+            "cat_id": "10",
+            "cat_name": "Chill Lofi Beats",
+            "thumnail_img": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/Cover 1.jpg",
+            "premium": "N",
+            "count": "25",
+            "updated": "2026-01-14T09:33:35.000Z",
+            "likes": "25",
+            "banner_image": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/Cover 2.jpg"
+        },
+        {
+            "cat_id": "11",
+            "cat_name": "Soft Pop",
+            "thumnail_img": "https://storage.googleapis.com/calm_sleep/soft_pop/Cover 1.jpg",
+            "premium": "N",
+            "count": "25",
+            "updated": "2026-02-16T11:22:50.000Z",
+            "likes": "25",
+            "banner_image": "https://storage.googleapis.com/calm_sleep/soft_pop/Cover 2.jpg"
+        },
+        {
+            "cat_id": "12",
+            "cat_name": "Binaural Therapy",
+            "thumnail_img": "https://storage.googleapis.com/calm_sleep/binaural_therapy/Cover 1.jpg",
+            "premium": "N",
+            "count": "25",
+            "updated": "2026-02-24T06:50:44.000Z",
+            "likes": "25",
+            "banner_image": "https://storage.googleapis.com/calm_sleep/binaural_therapy/Cover 2.jpg"
+        },
+        {
+            "cat_id": "13",
+            "cat_name": "Classical Music ",
+            "thumnail_img": "https://storage.googleapis.com/calm_sleep/classical_music_/Cover 1.jpg",
+            "premium": "N",
+            "count": "25",
+            "updated": "2026-02-24T07:25:30.000Z",
+            "likes": "25",
+            "banner_image": "https://storage.googleapis.com/calm_sleep/classical_music_/Cover 2.jpg"
+        },
+        {
+            "cat_id": "14",
+            "cat_name": "Celtic Music",
+            "thumnail_img": "https://storage.googleapis.com/calm_sleep/celtic_music/Cover 1.jpg",
+            "premium": "N",
+            "count": "25",
+            "updated": "2026-02-26T10:48:12.000Z",
+            "likes": "25",
+            "banner_image": "https://storage.googleapis.com/calm_sleep/celtic_music/Cover 2.jpg"
+        },
+        {
+            "cat_id": "17",
+            "cat_name": "Ambient",
+            "thumnail_img": "https://storage.googleapis.com/calm_sleep/ambient/ambient_thumbnail_image.jpg",
+            "premium": "N",
+            "count": "25",
+            "updated": "2026-03-16T10:49:07.000Z",
+            "likes": "25",
+            "banner_image": "https://storage.googleapis.com/calm_sleep/ambient/ambient_banner_image.jpg"
+        }
+    ]
+  };
+
+    return res.status(200).json(response);
+
+  } catch (err) {
+    return res.status(500).json({
+      status: {
+        message: "Internal Server Error",
+        code: "500",
+        code_str: "server_error",
+        extra_data: err.message
+      }
+    });
+  }
+};
+
+export const getSoundSpeed = async (req, res) => {
+  try {
+    const { cat_id } = req.query;
+
+    if (!cat_id) {
+      return res.status(400).json({
+        status: {
+          message: "missing data",
+          code: "400",
+          code_str: "bad_request",
+          extra_data: ""
+        }
+      });
+    }
+
+    const safeCatId = String(cat_id).trim();
+    if (!/^\d+$/.test(safeCatId)) {
+      return res.status(400).json({
+        status: {
+          message: "invalid cat_id",
+          code: "400",
+          code_str: "bad_request",
+          extra_data: ""
+        }
+      });
+    }
+
+    const jsonPath = path.join(constantsDir, `${safeCatId}.json`);
+    let parsed;
+    try {
+      const raw = await readFile(jsonPath, "utf8");
+      parsed = JSON.parse(raw);
+    } catch (err) {
+      return res.status(404).json({
+        status: {
+          message: "Category not found",
+          code: "404",
+          code_str: "not_found",
+          extra_data: ""
+        }
+      });
+    }
+
+    return res.status(200).json({
+      message: "Fetched All Data By Category Id",
+      ...parsed
+    });
 
   } catch (err) {
     return res.status(500).json({

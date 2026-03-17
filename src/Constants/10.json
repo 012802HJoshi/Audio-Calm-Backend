@@ -1,0 +1,233 @@
+{
+    "status": {
+        "message": "success",
+        "code": "200",
+        "code_str": "ok",
+        "extra_data": ""
+    },
+    "data": {
+        "Lastupdated": "2026-03-17T17:51:43.008Z",
+        "calm": [
+            {
+                "id": "140",
+                "title": "Lo Fi Hip-Hop Mellow Background",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lo_fi_hip-hop_mellow_background/Lo Fi Hip-Hop Mellow Background.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lo_fi_hip-hop_mellow_background/1.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "2:03"
+            },
+            {
+                "id": "141",
+                "title": "Lo Fi Jazz",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lo_fi_jazz/File A 2-04_ElectroAnimals - Lo Fi Jazz (Full Version).mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lo_fi_jazz/2.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "2:05"
+            },
+            {
+                "id": "142",
+                "title": "1Lofi Chill",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/1lofi_chill/1Lofi Chill.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/1lofi_chill/3.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "2:50"
+            },
+            {
+                "id": "143",
+                "title": "That Soft ",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/that_soft_/That+Soft+LoFi+Full.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/that_soft_/4.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "1:17"
+            },
+            {
+                "id": "144",
+                "title": "Soft Lounge Lofi",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/soft_lounge_lofi/Soft+Lounge+Lofi.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/soft_lounge_lofi/5.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "1:49"
+            },
+            {
+                "id": "145",
+                "title": "Tea Room Lo-Fi",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/tea_room_lo-fi/Tea+Room+Lo-Fi+-+Full.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/tea_room_lo-fi/6.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "3:11"
+            },
+            {
+                "id": "146",
+                "title": "Dreamy Chill Music",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/dreamy_chill_music/1+Dreamy+Chill+Music.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/dreamy_chill_music/7.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "2:18"
+            },
+            {
+                "id": "147",
+                "title": "Latin Guitar and Soft Brass",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/latin_guitar_and_soft_brass/Latin+Guitar+and+Soft+Brass.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/latin_guitar_and_soft_brass/8.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "2:47"
+            },
+            {
+                "id": "148",
+                "title": "Latin Lo-Fi",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/latin_lo-fi/1635_Latin_Lo-Fi.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/latin_lo-fi/9.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "2:18"
+            },
+            {
+                "id": "149",
+                "title": "Lo-Fi Beats",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lo-fi_beats/Lo-Fi Beats.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lo-fi_beats/10.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "2:27"
+            },
+            {
+                "id": "150",
+                "title": "Latin Romantic LoFi Beat",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/latin_romantic_lofi_beat/Latin Romantic LoFi Beat.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/latin_romantic_lofi_beat/11.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "2:47"
+            },
+            {
+                "id": "151",
+                "title": "Lofi Chill Hip-Hop",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lofi_chill_hip-hop/Lofi+Chill+Hip-Hop+(Long+Version).mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lofi_chill_hip-hop/12.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "3:13"
+            },
+            {
+                "id": "152",
+                "title": "Lofi Jazz Chill",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lofi_jazz_chill/File A 2-06 WormsTeam-Lofi Jazz Chill (Full).mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lofi_jazz_chill/13.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "2:06"
+            },
+            {
+                "id": "153",
+                "title": "LoFi Summer",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lofi_summer/LoFi+Summer.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lofi_summer/14.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "2:21"
+            },
+            {
+                "id": "154",
+                "title": "Lofi Morning",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lofi_morning/Lofi Morning.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lofi_morning/15.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "1:36"
+            },
+            {
+                "id": "155",
+                "title": "Lo-fi Chill This",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lo-fi_chill_this/Lo-fi+Chill+This.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lo-fi_chill_this/16.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "2:23"
+            },
+            {
+                "id": "156",
+                "title": "Lo-Fi Chill Beat",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lo-fi_chill_beat/Lo-Fi+Chill+Beat.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lo-fi_chill_beat/17.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "1:59"
+            },
+            {
+                "id": "157",
+                "title": "Lofi Jazzy Weekend",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lofi_jazzy_weekend/Lofi+Jazzy+Weekend.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lofi_jazzy_weekend/18.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "3:18"
+            },
+            {
+                "id": "158",
+                "title": "Instrumental Lofi Chillout",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/instrumental_lofi_chillout/Instrumental+Lofi+Chillout.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/instrumental_lofi_chillout/19.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "2:21"
+            },
+            {
+                "id": "159",
+                "title": "Peaceful Lounge Lofi",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/peaceful_lounge_lofi/Peaceful+Lounge+Lofi.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/peaceful_lounge_lofi/20.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "1:42"
+            }
+        ]
+    }
+}

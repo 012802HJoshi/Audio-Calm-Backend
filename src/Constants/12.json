@@ -1,0 +1,233 @@
+{
+    "status": {
+        "message": "success",
+        "code": "200",
+        "code_str": "ok",
+        "extra_data": ""
+    },
+    "data": {
+        "Lastupdated": "2026-03-17T17:52:54.819Z",
+        "calm": [
+            {
+                "id": "181",
+                "title": "The Theta Binaural",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/the_theta_binaural/the-theta-binaural.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/the_theta_binaural/1.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "5:03"
+            },
+            {
+                "id": "182",
+                "title": "Binaural Meditation",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_meditation/Binaural+Meditation.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_meditation/2.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "9:53"
+            },
+            {
+                "id": "183",
+                "title": "Meditation Binaural",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/meditation_binaural/Meditation+Binaural.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/meditation_binaural/3.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "9:55"
+            },
+            {
+                "id": "184",
+                "title": "1Binaural Meditation",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/1binaural_meditation/1Binaural+Meditation.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/1binaural_meditation/4.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "9:57"
+            },
+            {
+                "id": "185",
+                "title": "Binaural Beats 4Hz Deep Meditation",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_beats_4hz_deep_meditation/Binaural+Beats+4Hz+Deep+Meditation.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_beats_4hz_deep_meditation/5.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "6:34"
+            },
+            {
+                "id": "186",
+                "title": "2Binaural Meditation",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/2binaural_meditation/2Binaural+Meditation.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/2binaural_meditation/6.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "9:25"
+            },
+            {
+                "id": "187",
+                "title": "Theta Binaural Meditation",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/theta_binaural_meditation/Theta+Binaural+Meditation.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/theta_binaural_meditation/7.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "6:20"
+            },
+            {
+                "id": "188",
+                "title": "Binaural Beat Relaxation Meditation",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_beat_relaxation_meditation/Binaural+Beat+Relaxation+Meditation.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_beat_relaxation_meditation/8.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "7:19"
+            },
+            {
+                "id": "189",
+                "title": "8D Binaural Relaxing Healing Meditation",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/8d_binaural_relaxing_healing_meditation/8D+Binaural+Relaxing+Healing+Meditation_01.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/8d_binaural_relaxing_healing_meditation/9.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "10:00"
+            },
+            {
+                "id": "190",
+                "title": "3Binaural Meditation Therapy",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/3binaural_meditation_therapy/3Binaural+Meditation+Therapy.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/3binaural_meditation_therapy/10.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "9:58"
+            },
+            {
+                "id": "191",
+                "title": "Theta Binaural Nature Meditation",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/theta_binaural_nature_meditation/theta+binaural+natural+meditation.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/theta_binaural_nature_meditation/11.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "5:02"
+            },
+            {
+                "id": "192",
+                "title": "Binaural Deep Meditation",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_deep_meditation/Binaural+Deep+Meditation.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_deep_meditation/12.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "3:28"
+            },
+            {
+                "id": "193",
+                "title": "Binaural Soundscape",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_soundscape/Binarual Soundscape.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_soundscape/13.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "2:10"
+            },
+            {
+                "id": "194",
+                "title": "Meditation & Therapeutic Binaural Music",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/meditation_&_therapeutic_binaural_music/Meditation+and+therapeutic+binaural+music.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/meditation_&_therapeutic_binaural_music/14.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "4:20"
+            },
+            {
+                "id": "195",
+                "title": "Brain Waves",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/brain_waves/brain-waves_main-full.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/brain_waves/15.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "2:38"
+            },
+            {
+                "id": "196",
+                "title": "Mind Detox",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/mind_detox/Mind+Detox.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/mind_detox/16.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "8:48"
+            },
+            {
+                "id": "197",
+                "title": "Subconscious Mind",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/subconscious_mind/Subconscious+Mind.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/subconscious_mind/17.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "4:39"
+            },
+            {
+                "id": "198",
+                "title": "Binaural Yoga Relax",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_yoga_relax/binaural+yoga+relax.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_yoga_relax/18.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "9:56"
+            },
+            {
+                "id": "199",
+                "title": "Binaural Beats 10Hz Stress Reduction",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_beats_10hz_stress_reduction/Binaural+Beats+10Hz+Stress+Reduction.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/binaural_beats_10hz_stress_reduction/19.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "2:21"
+            },
+            {
+                "id": "200",
+                "title": "Astral Reverie Meditation",
+                "st_url": "https://storage.googleapis.com/calm_sleep/binaural_therapy/astral_reverie_meditation/astral-reverie-meditation.mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/binaural_therapy/astral_reverie_meditation/20.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Binaural Therapy",
+                "powerdby": "NA",
+                "duration": "8:12"
+            }
+        ]
+    }
+}

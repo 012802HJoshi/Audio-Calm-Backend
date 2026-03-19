@@ -41,17 +41,17 @@
                     "powerdby": "NA",
                     "duration": "2:35"
                 },
-         {
-            "id":"4",
-            "title":"Floating To Sleep",
-            "st_url":"/audio/calm/floating_to_sleep.mp3",
-            "thumbnail":"/img/calm/floating_to_sleep.jpg",
-            "big_img":"",
-            "premium":"y",
-            "writer":"",
-            "powerdby":"",
-            "duration":""
-         },
+          {
+                "id": "4",
+                "title": "Lo Fi Jazz",
+                "st_url": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lo_fi_jazz/File A 2-04_ElectroAnimals - Lo Fi Jazz (Full Version).mp3",
+                "thumbnail": "https://storage.googleapis.com/calm_sleep/chill_lofi_beats/lo_fi_jazz/2.jpg",
+                "big_img": "NA",
+                "premium": "N",
+                "writer": "Chill Lofi Beats",
+                "powerdby": "NA",
+                "duration": "2:05"
+            },
           {
                     "id": "5",
                     "title": "Sleep Spell",
